@@ -1,19 +1,6 @@
 <?php
 
 /**
- * The file that defines the core plugin class
- *
- * A class definition that includes attributes and functions used across both the
- * public-facing side of the site and the admin area.
- *
- * @link       https://addonify.com
- * @since      1.0.0
- *
- * @package    Addonify_Recaptcha_For_Edd
- * @subpackage Addonify_Recaptcha_For_Edd/includes
- */
-
-/**
  * The core plugin class.
  *
  * This is used to define internationalization, admin-specific hooks, and
@@ -200,7 +187,7 @@ class Addonify_Recaptcha_For_Edd {
 	public function admin_notice() {
 		?>
 		<div class="notice notice-error is-dismissible">
-			<p><?php echo __( 'Addonify reCAPCHA For EDD is enabled but not effective. It requires Easy Digital Downloads in order to work.', 'addonify-recaptcha-for-edd' ); ?></p>
+			<p><?php echo __( 'Addonify reCaptcha For EDD is enabled but not effective. It requires Easy Digital Downloads in order to work.', 'addonify-recaptcha-for-edd' ); ?></p>
 		</div>
 		<?php	
 	}

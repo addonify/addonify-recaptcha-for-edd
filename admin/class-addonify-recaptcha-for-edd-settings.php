@@ -34,7 +34,7 @@ if ( ! class_exists( 'Addonify_reCAPTCHA_For_EDD_Settings' ) ) {
 		 */
 		public function register_tab( $tabs ) {
 
-			$tabs['addonify-recaptcha-for-edd-settings'] = __( 'reCAPTCHA', 'addonify-recaptcha-for-edd' );
+			$tabs['addonify-recaptcha-for-edd-settings'] = __( 'reCaptcha', 'addonify-recaptcha-for-edd' );
 
 			return $tabs;
 		}
