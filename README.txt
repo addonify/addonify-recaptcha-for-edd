@@ -1,19 +1,32 @@
-=== Addonify reCAPTCHA For EDD ===
+=== Addonify reCaptcha For EDD ===
 Contributors: Addonify
-Tags: comments, spam, recaptcha for edd, captcha for edd, edd login recaptcha, edd register recaptcha
+Tags: recaptcha, recaptcha for edd, captcha for edd, edd login recaptcha, edd register recaptcha, spam, security
 Requires at least: 5.0
 Tested up to: 5.6
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Addonify reCAPTCHA For EDD is a plugin that adds Google reCAPTCHA in login and registration forms of Easy Digital Downloads.
+Addonify reCAPTCHA for EDD is a simple plugin that adds Google reCaptcha in Easy Digital Downloads login and registration forms.
 
 
 == Description ==
 
-Addonify reCAPTCHA For EDD is a plugin that adds Google reCAPTCHA in login and registration forms of Easy Digital Downloads.]
+[Addonify reCAPTCHA For EDD](https://addonify.com/) is a simple plugin that adds Google reCaptcha in Easy Digital Downloads login and registration forms.
 
+Note: This plugin will only work in EDD (Easy Digital Downloads) login & registration form. 
+
+**FEATURES:**
+
+✅ Add Google reCaptcha v2 in EDD login forms.
+✅ Add Google reCaptcha v2 in EDD register forms.
+
+**KNOWN LIMITATIONS:**
+
+❌ We have not tested this plugin in WP Multisite. 
+❌ EDD login submit button is clickable even without passing reCaptcha validation. 
+❌ EDD registration submit button is clickable even without passing reCaptcha validation. 
+❌ Only supports Google reCaptcha v2 no-robot checkbox. 
 
 == Installation ==
 
@@ -38,5 +51,10 @@ Log into your Google account and [Sign Up](http://www.google.com/recaptcha/admin
 
 == Changelog ==
 
-= 1.0.0 =
-* Initial release`
+= 1.0.1 = Released on: 10 January 2021 
+
+- Updated readme.txt
+
+= 1.0.0 = Released on: 05 January 2021 
+
+- Initial release
