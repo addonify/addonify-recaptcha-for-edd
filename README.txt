@@ -1,9 +1,11 @@
 === Addonify reCaptcha For EDD ===
+
 Contributors: Addonify
 Tags: recaptcha, recaptcha for edd, captcha for edd, edd login recaptcha, edd register recaptcha, spam, security
 Requires at least: 5.0
-Tested up to: 5.6
-Stable tag: 1.0.2
+Requires PHP: 7.0
+Tested up to: 5.7.1
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -60,14 +62,18 @@ Log into your Google account and [Sign Up](http://www.google.com/recaptcha/admin
 
 == Changelog ==
 
-= 1.0.2 = Released on: 12 January 2021 
+= 1.0.3 = Release on: 15 April, 2021
+
+- Updated: Explicit rendering of the reCaptcha widget.
+
+= 1.0.2 = Released on: 12 January, 2021 
 
 - Updated: Readme.txt
 
-= 1.0.1 = Released on: 10 January 2021 
+= 1.0.1 = Released on: 10 January, 2021 
 
 - Updated readme.txt
 
-= 1.0.0 = Released on: 05 January 2021 
+= 1.0.0 = Released on: 05 January, 2021 
 
 - Initial release

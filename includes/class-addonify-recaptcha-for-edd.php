@@ -57,7 +57,7 @@ class Addonify_Recaptcha_For_Edd {
 		if ( defined( 'ADDONIFY_RECAPTCHA_FOR_EDD_VERSION' ) ) {
 			$this->version = ADDONIFY_RECAPTCHA_FOR_EDD_VERSION;
 		} else {
-			$this->version = '1.0.0';
+			$this->version = '1.0.3';
 		}
 		$this->plugin_name = 'addonify-recaptcha-for-edd';
 
@@ -150,11 +150,11 @@ class Addonify_Recaptcha_For_Edd {
 
 		$edd_settings = get_option( 'edd_settings' );
 		
-		if ( isset( $edd_settings['addonify_recaptcha_for_edd_show_recaptcha_in_register_form'] ) && $edd_settings['addonify_recaptcha_for_edd_show_recaptcha_in_register_form'] == true ) {
+		if ( isset( $edd_settings['addonify_recaptcha_for_edd_show_recaptcha_in_register_form'] ) && $edd_settings['addonify_recaptcha_for_edd_show_recaptcha_in_register_form'] == '1' ) {
 			$this->loader->add_action( 'edd_process_register_form', $plugin_admin, 'recaptcha_process' );
 		}
 
-		if ( isset( $edd_settings['addonify_recaptcha_for_edd_show_recaptcha_in_login_form'] ) && $edd_settings['addonify_recaptcha_for_edd_show_recaptcha_in_login_form'] == true ) {
+		if ( isset( $edd_settings['addonify_recaptcha_for_edd_show_recaptcha_in_login_form'] ) && $edd_settings['addonify_recaptcha_for_edd_show_recaptcha_in_login_form'] == '1' ) {
 			$this->loader->add_filter( 'init', $plugin_admin, 'process_login' );
 		}
 
@@ -173,14 +173,17 @@ class Addonify_Recaptcha_For_Edd {
 
 		$plugin_public = new Addonify_Recaptcha_For_Edd_Public( $this->get_plugin_name(), $this->get_version() );
 
+		if ( isset( $edd_settings['addonify_recaptcha_for_edd_show_recaptcha_in_register_form'] ) && $edd_settings['addonify_recaptcha_for_edd_show_recaptcha_in_register_form'] == '1' ) {
+			$this->loader->add_action( 'edd_register_form_fields_before_submit', $plugin_public, 'insert_recaptcha_element' );
+		}
+
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts', 10 );
+
+		// $this->loader->add_action( 'wp_footer', $plugin_public, 'g_recaptcha_render_script', 10 );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'g_recaptcha_script', 20 );
 
-		if ( isset( $edd_settings['addonify_recaptcha_for_edd_show_recaptcha_in_register_form'] ) && $edd_settings['addonify_recaptcha_for_edd_show_recaptcha_in_register_form'] == true ) {
-			$this->loader->add_action( 'edd_register_form_fields_before_submit', $plugin_public, 'insert_recaptcha' );
-		}
-
+		$this->loader->add_filter( 'script_loader_tag', $plugin_public, 'g_recaptcha_script_loader_tag', 20, 3 );
 	}
 
 
