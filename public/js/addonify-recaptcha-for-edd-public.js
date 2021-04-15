@@ -1,41 +1,52 @@
-(function( $ ) {
-	'use strict';
+var currentTime = Date.now();
 
-	/**
-	 * All of the code for your public-facing JavaScript source
-	 * should reside in this file.
-	 *
-	 * Note: It has been assumed you will write jQuery code here, so the
-	 * $ function reference has been prepared for usage within the scope
-	 * of this function.
-	 *
-	 * This enables you to define handlers, for when the DOM is ready:
-	 *
-	 * $(function() {
-	 *
-	 * });
-	 *
-	 * When the window is loaded:
-	 *
-	 * $( window ).load(function() {
-	 *
-	 * });
-	 *
-	 * ...and/or other possibilities.
-	 *
-	 * Ideally, it is not considered best practise to attach more than a
-	 * single DOM-ready or window-load handler for a particular page.
-	 * Although scripts in the WordPress core, Plugins and Themes may be
-	 * practising this, we should strive to set a better example in our own work.
-	 */
-	 jQuery(document).ready(function(){
-	 	if ( addonify_recaptcha_vars.show_recaptch_in_login == '1' ) {
-	 		var secreteKey = addonify_recaptcha_vars.client_secrete_key;
-	 		var passwordElement = jQuery('#edd_login_form p.edd-login-password');
-	 		if ( passwordElement ) {
-	 			var element = '<p class="g-recaptcha" data-sitekey="'+secreteKey+'"></p>';
-	 			passwordElement.after(element);	 		
-	 		}
-	 	}
-	 });
-})( jQuery );
+var captchaEle;
+
+// Addonify Recaptcha Object Initialization.
+var addonifyRecaptcha = {
+
+	createRecaptchaEle : function() {
+		// Get login form element.
+		loginForm = document.getElementById('edd_login_form');
+		// Get register form element.
+		registerForm = document.getElementById('edd_register_form');
+
+		// If loginForm isn't "undefined" and loginForm isn't "null", then loginForm exists.
+	    if ( typeof(loginForm) != 'undefined' && loginForm != null ) {
+	    	// Check if reCaptcha should be displayed.
+	    	if ( addonifyRecaptchaArgs.showRecaptchaInLogin == '1' ) {
+		        // Create an paragraph for recaptcha element.
+				captchaEle = document.createElement('p');
+				// Set id attribute to the recaptcha element.
+				captchaEle.setAttribute("id", "addonify-g-recaptcha-"+currentTime);
+				// Get the element before which the recaptcha element is to be inserted.
+				var target = document.querySelector('#edd_login_form p.edd-login-remember');
+				// Insert recaptcha element before the target element.
+				target.parentNode.insertBefore(captchaEle,target);
+			}
+	    }
+
+	    // If registerForm isn't "undefined" and registerForm isn't "null", then registerForm exists.
+	    if ( typeof(registerForm) != 'undefined' && registerForm != null ) {
+	    	// Check if reCaptcha should be displayed.
+	    	if ( addonifyRecaptchaArgs.showRecaptchaInRegister == '1' ) {
+		        // Create an paragraph for recaptcha element.
+				captchaEle = document.getElementById('addonify-g-recaptcha');
+				// Set id attribute to the recaptcha element.
+				captchaEle.setAttribute("id", "addonify-g-recaptcha-"+currentTime);
+			}
+	    }
+		
+	},
+}
+
+addonifyRecaptcha.createRecaptchaEle();
+
+var onloadCallback = function() {
+
+	if ( captchaEle != null ) {
+		grecaptcha.render(captchaEle, {
+			'sitekey' : addonifyRecaptchaArgs.clientSecreteKey
+	    });
+	}
+};

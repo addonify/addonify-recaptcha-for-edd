@@ -94,21 +94,29 @@ class Addonify_Recaptcha_For_Edd_Public {
 		 * class.
 		 */
 
-		wp_register_script ( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/addonify-recaptcha-for-edd-public.js', array('jquery'), $this->version, true );
+		wp_register_script ( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/addonify-recaptcha-for-edd-public.js', array(), $this->version, true );
 
-		$args = array();
+		$args = array(
+			'showRecaptchaInLogin' => false,
+			'showRecaptchaInRegister' => false,
+			'clientSecreteKey' => ''
+		);
 
 		$edd_settings = get_option( 'edd_settings' );
 
-		if ( isset( $edd_settings['addonify_recaptcha_for_edd_show_recaptcha_in_login_form'] ) && $edd_settings['addonify_recaptcha_for_edd_show_recaptcha_in_login_form'] == true ) {
-			$args['show_recaptch_in_login'] = true;
+		if ( isset( $edd_settings['addonify_recaptcha_for_edd_show_recaptcha_in_login_form'] ) && $edd_settings['addonify_recaptcha_for_edd_show_recaptcha_in_login_form'] == '1' ) {
+			$args['showRecaptchaInLogin'] = true;
 		}
 
-		if ( $edd_settings['addonify_recaptcha_for_edd_client_key'] ) {
-			$args['client_secrete_key'] = $edd_settings['addonify_recaptcha_for_edd_client_key'];
+		if ( isset( $edd_settings['addonify_recaptcha_for_edd_show_recaptcha_in_register_form'] ) && $edd_settings['addonify_recaptcha_for_edd_show_recaptcha_in_register_form'] == '1' ) {
+			$args['showRecaptchaInRegister'] = true;
 		}
 
-		wp_localize_script( $this->plugin_name, 'addonify_recaptcha_vars', $args );
+		if ( isset( $edd_settings['addonify_recaptcha_for_edd_client_key'] ) && $edd_settings['addonify_recaptcha_for_edd_client_key'] ) {
+			$args['clientSecreteKey'] = $edd_settings['addonify_recaptcha_for_edd_client_key'];
+		}
+
+		wp_localize_script( $this->plugin_name, 'addonifyRecaptchaArgs', $args );
 
 		wp_enqueue_script ( $this->plugin_name );
 
@@ -116,16 +124,20 @@ class Addonify_Recaptcha_For_Edd_Public {
 	}
 
 	public function g_recaptcha_script() {
-		wp_enqueue_script( $this->plugin_name . '-recaptcha', 'https://www.google.com/recaptcha/api.js', array(), '', true );
+		wp_enqueue_script( $this->plugin_name . '-recaptcha', 'https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit', array(), '', true );
 	}
 
-	public function insert_recaptcha() {
+	public function g_recaptcha_script_loader_tag( $tag, $handle, $src ) {
 
-		$edd_settings = get_option( 'edd_settings' );
-
-		$client_key = $edd_settings['addonify_recaptcha_for_edd_client_key'];
-
-		echo '<p class="g-recaptcha" data-sitekey="' . esc_attr( $client_key ) . '"></p>';
+		if ( $this->plugin_name . '-recaptcha' === $handle ) {
+        	$tag = '<script type="text/javascript" src="' . esc_url( $src ) . '" async="async" defer="defer"></script>';
+	    }
+	 
+	    return $tag;
 	}
 
+	public function insert_recaptcha_element() {
+
+		echo '<p id="addonify-g-recaptcha"></p>';
+	}
 }
