@@ -4,8 +4,8 @@ Contributors: Addonify
 Tags: recaptcha, recaptcha for edd, captcha for edd, edd login recaptcha, edd register recaptcha, spam, security
 Requires at least: 5.0
 Requires PHP: 7.0
-Tested up to: 5.7.1
-Stable tag: 1.0.3
+Tested up to: 5.8
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -61,6 +61,10 @@ Log into your Google account and [Sign Up](http://www.google.com/recaptcha/admin
 
 
 == Changelog ==
+
+= 1.0.4 = Release on: 21 July, 2021
+
+- Tested: up to WordPress version 5.8
 
 = 1.0.3 = Release on: 15 April, 2021
 
