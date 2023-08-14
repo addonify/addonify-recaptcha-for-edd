@@ -9,17 +9,6 @@
  * @package    Addonify_Recaptcha_For_Edd
  * @subpackage Addonify_Recaptcha_For_Edd/public
  */
-
-/**
- * The public-facing functionality of the plugin.
- *
- * Defines the plugin name, version, and two examples hooks for how to
- * enqueue the public-facing stylesheet and JavaScript.
- *
- * @package    Addonify_Recaptcha_For_Edd
- * @subpackage Addonify_Recaptcha_For_Edd/public
- * @author     Addonify <addonify@gmail.com>
- */
 class Addonify_Recaptcha_For_Edd_Public {
 
 	/**
@@ -60,19 +49,7 @@ class Addonify_Recaptcha_For_Edd_Public {
 	 */
 	public function enqueue_styles() {
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Addonify_Recaptcha_For_Edd_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Addonify_Recaptcha_For_Edd_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/addonify-recaptcha-for-edd-public.css', array(), $this->version, 'all' );
+		//wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/addonify-recaptcha-for-edd-public.css', array(), $this->version, 'all' );
 	}
 
 	/**
@@ -81,18 +58,6 @@ class Addonify_Recaptcha_For_Edd_Public {
 	 * @since    1.0.0
 	 */
 	public function enqueue_scripts() {
-
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Addonify_Recaptcha_For_Edd_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Addonify_Recaptcha_For_Edd_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
 
 		wp_register_script ( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/addonify-recaptcha-for-edd-public.js', array(), $this->version, true );
 
@@ -119,11 +84,10 @@ class Addonify_Recaptcha_For_Edd_Public {
 		wp_localize_script( $this->plugin_name, 'addonifyRecaptchaArgs', $args );
 
 		wp_enqueue_script ( $this->plugin_name );
-
-		
 	}
 
 	public function g_recaptcha_script() {
+		
 		wp_enqueue_script( $this->plugin_name . '-recaptcha', 'https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit', array(), '', true );
 	}
 

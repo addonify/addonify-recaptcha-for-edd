@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The core plugin class.
  *
@@ -189,7 +188,7 @@ class Addonify_Recaptcha_For_Edd {
 
 	public function admin_notice() {
 		?>
-		<div class="notice notice-error is-dismissible">
+		<div class="notice notice-error">
 			<p><?php echo __( 'Addonify reCaptcha For EDD is enabled but not effective. It requires Easy Digital Downloads in order to work.', 'addonify-recaptcha-for-edd' ); ?></p>
 		</div>
 		<?php	

@@ -9,18 +9,6 @@
  * @package    Addonify_Recaptcha_For_Edd
  * @subpackage Addonify_Recaptcha_For_Edd/includes
  */
-
-/**
- * Register all actions and filters for the plugin.
- *
- * Maintain a list of all hooks that are registered throughout
- * the plugin, and register them with the WordPress API. Call the
- * run function to execute the list of actions and filters.
- *
- * @package    Addonify_Recaptcha_For_Edd
- * @subpackage Addonify_Recaptcha_For_Edd/includes
- * @author     Addonify <addonify@gmail.com>
- */
 class Addonify_Recaptcha_For_Edd_Loader {
 
 	/**

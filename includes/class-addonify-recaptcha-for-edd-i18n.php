@@ -12,18 +12,6 @@
  * @package    Addonify_Recaptcha_For_Edd
  * @subpackage Addonify_Recaptcha_For_Edd/includes
  */
-
-/**
- * Define the internationalization functionality.
- *
- * Loads and defines the internationalization files for this plugin
- * so that it is ready for translation.
- *
- * @since      1.0.0
- * @package    Addonify_Recaptcha_For_Edd
- * @subpackage Addonify_Recaptcha_For_Edd/includes
- * @author     Addonify <addonify@gmail.com>
- */
 class Addonify_Recaptcha_For_Edd_i18n {
 
 

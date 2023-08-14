@@ -1,11 +1,11 @@
-=== Addonify reCaptcha For EDD ===
+=== Addonify - reCaptcha For EDD ===
 
 Contributors: Addonify
-Tags: recaptcha, recaptcha for edd, captcha for edd, edd login recaptcha, edd register recaptcha, spam, security
+Tags: recaptcha, edd recaptcha, google recaptcha, login recaptcha, register recaptcha, spam, security, edd
 Requires at least: 5.0
 Requires PHP: 7.4.0
 Tested up to: 6.3.0
-Stable tag: 1.0.10
+Stable tag: 1.0.11
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,11 +14,7 @@ Addonify reCAPTCHA for EDD is a simple plugin that adds Google reCaptcha in Easy
 
 == Description ==
 
-[Addonify reCAPTCHA For EDD](https://addonify.com/) is a simple plugin that adds Google reCaptcha in Easy Digital Downloads login and registration forms.
-
-Note: This plugin will only work in EDD (Easy Digital Downloads) login & registration form. 
-
-To enable reCaptcha go to EDD Setting > reCaptcha.
+[Addonify reCAPTCHA For EDD](https://addonify.com/) is a simple plugin that adds Google reCaptcha in Easy Digital Downloads login and registration forms. Enable reCaptcha from Dashboard > EDD Setting > reCaptcha.
 
 **FEATURES:**
 
@@ -62,56 +58,63 @@ Log into your Google account and [Sign Up](http://www.google.com/recaptcha/admin
 
 == Changelog ==
 
-== 1.0.10 - 14 August 2023, 2022 ==
+= 1.0.11 - ? 2023 =
+
+- Updated: Tags.
+- Fix: Readme.txt issues.
+- Removed: Unused files & wp enqueue scripts that are not needed.
+
+
+= 1.0.10 - 14 August 2023 =
 
 - Added: Missing wordpress.org logo.
 - Bumped: version of plugin to fix the issue of missing wordpress.org logo.
 
 
-== 1.0.9 - 14 August 2023, 2022 ==
+= 1.0.9 - 14 August 2023 =
 
 - Tested: with WordPress version 6.3.0.
 - Tested: with EDD version 3.1.5.
 
 
-== 1.0.8 - 21 October 2022 ==
+= 1.0.8 - 21 October 2022 =
 
 - Tested: with WordPress version 6.0.3.
 - Tested: with EDD version 3.1.0.1
 
 
-== 1.0.7 - 31 August 2022 ==
+= 1.0.7 - 31 August 2022 =
 
 - Tested: with WordPress version 6.0.2.
 
 
-== 1.0.6 - 28 May 2022 ==
+= 1.0.6 - 28 May 2022 =
 
 - Tested: up to WordPress 6.0
 
 
-== 1.0.5 - 09 February 2022 ==
+= 1.0.5 - 09 February 2022 =
 
 - Tested: WordPress version 5.9
 - Tested: EDD version 2.11.5
 
 
-== 1.0.4 - 21 July 2021 ==
+= 1.0.4 - 21 July 2021 =
 
 - Tested: up to WordPress version 5.8
 
 
-== 1.0.3 - 15 April 2021 ==
+= 1.0.3 - 15 April 2021 =
 
 - Updated: Explicit rendering of the reCaptcha widget.
 
 
-== 1.0.2 - 12 January 2021 ==
+= 1.0.2 - 12 January 2021 =
 
 - Updated: Readme.txt
 
 
-== 1.0.1 - 10 January 2021 ==
+= 1.0.1 - 10 January 2021 =
 
 - Updated readme.txt
 

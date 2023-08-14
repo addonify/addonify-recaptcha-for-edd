@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The admin-specific functionality of the plugin.
  *
@@ -8,17 +7,6 @@
  *
  * @package    Addonify_Recaptcha_For_Edd
  * @subpackage Addonify_Recaptcha_For_Edd/admin
- */
-
-/**
- * The admin-specific functionality of the plugin.
- *
- * Defines the plugin name, version, and two examples hooks for how to
- * enqueue the admin-specific stylesheet and JavaScript.
- *
- * @package    Addonify_Recaptcha_For_Edd
- * @subpackage Addonify_Recaptcha_For_Edd/admin
- * @author     Addonify <addonify@gmail.com>
  */
 class Addonify_Recaptcha_For_Edd_Admin {
 
@@ -60,19 +48,7 @@ class Addonify_Recaptcha_For_Edd_Admin {
 	 */
 	public function enqueue_styles() {
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Addonify_Recaptcha_For_Edd_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Addonify_Recaptcha_For_Edd_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/addonify-recaptcha-for-edd-admin.css', array(), $this->version, 'all' );
+		//wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/addonify-recaptcha-for-edd-admin.css', array(), $this->version, 'all' );
 	}
 
 	/**
@@ -82,19 +58,7 @@ class Addonify_Recaptcha_For_Edd_Admin {
 	 */
 	public function enqueue_scripts() {
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Addonify_Recaptcha_For_Edd_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Addonify_Recaptcha_For_Edd_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/addonify-recaptcha-for-edd-admin.js', array( 'jquery' ), $this->version, false );
+		//wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/addonify-recaptcha-for-edd-admin.js', array( 'jquery' ), $this->version, false );
 	}
 
 	public function process_login() {
