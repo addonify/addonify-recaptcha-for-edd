@@ -5,7 +5,7 @@ Tags: recaptcha, recaptcha for edd, captcha for edd, edd login recaptcha, edd re
 Requires at least: 5.0
 Requires PHP: 7.4.0
 Tested up to: 6.3.0
-Stable tag: 1.0.9
+Stable tag: 1.0.10
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -61,6 +61,12 @@ Log into your Google account and [Sign Up](http://www.google.com/recaptcha/admin
 
 
 == Changelog ==
+
+== 1.0.10 - 14 August 2023, 2022 ==
+
+- Added: Missing wordpress.org logo.
+- Bumped: version of plugin to fix the issue of missing wordpress.org logo.
+
 
 == 1.0.9 - 14 August 2023, 2022 ==
 
