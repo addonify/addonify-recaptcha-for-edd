@@ -3,9 +3,9 @@
 Contributors: Addonify
 Tags: recaptcha, recaptcha for edd, captcha for edd, edd login recaptcha, edd register recaptcha, spam, security
 Requires at least: 5.0
-Requires PHP: 7.0.0
-Tested up to: 6.0.3
-Stable tag: 1.0.8
+Requires PHP: 7.4.0
+Tested up to: 6.3.0
+Stable tag: 1.0.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,40 +62,54 @@ Log into your Google account and [Sign Up](http://www.google.com/recaptcha/admin
 
 == Changelog ==
 
-= 1.0.8 = Release on: 21 October, 2022
+== 1.0.9 - 14 August 2023, 2022 ==
+
+- Tested: with WordPress version 6.3.0.
+- Tested: with EDD version 3.1.5.
+
+
+== 1.0.8 - 21 October 2022 ==
 
 - Tested: with WordPress version 6.0.3.
 - Tested: with EDD version 3.1.0.1
 
-= 1.0.7 = Release on: 31 August, 2022
+
+== 1.0.7 - 31 August 2022 ==
 
 - Tested: with WordPress version 6.0.2.
 
-= 1.0.6 = Release on: 28 May, 2022
+
+== 1.0.6 - 28 May 2022 ==
 
 - Tested: up to WordPress 6.0
 
-= 1.0.5 = Release on: 09 February, 2022
+
+== 1.0.5 - 09 February 2022 ==
 
 - Tested: WordPress version 5.9
 - Tested: EDD version 2.11.5
 
-= 1.0.4 = Release on: 21 July, 2021
+
+== 1.0.4 - 21 July 2021 ==
 
 - Tested: up to WordPress version 5.8
 
-= 1.0.3 = Release on: 15 April, 2021
+
+== 1.0.3 - 15 April 2021 ==
 
 - Updated: Explicit rendering of the reCaptcha widget.
 
-= 1.0.2 = Released on: 12 January, 2021 
+
+== 1.0.2 - 12 January 2021 ==
 
 - Updated: Readme.txt
 
-= 1.0.1 = Released on: 10 January, 2021 
+
+== 1.0.1 - 10 January 2021 ==
 
 - Updated readme.txt
 
-= 1.0.0 = Released on: 05 January, 2021 
+
+== 1.0.0 - 05 January 2021 ==
 
 - Initial release
