@@ -156,7 +156,6 @@ class Addonify_Recaptcha_For_Edd {
 		if ( isset( $edd_settings['addonify_recaptcha_for_edd_show_recaptcha_in_login_form'] ) && $edd_settings['addonify_recaptcha_for_edd_show_recaptcha_in_login_form'] == '1' ) {
 			$this->loader->add_filter( 'init', $plugin_admin, 'process_login' );
 		}
-
 	}
 
 	/**
@@ -200,6 +199,7 @@ class Addonify_Recaptcha_For_Edd {
 	 * @since    1.0.0
 	 */
 	public function run() {
+
 		$this->loader->run();
 	}
 
@@ -211,6 +211,7 @@ class Addonify_Recaptcha_For_Edd {
 	 * @return    string    The name of the plugin.
 	 */
 	public function get_plugin_name() {
+
 		return $this->plugin_name;
 	}
 
@@ -221,6 +222,7 @@ class Addonify_Recaptcha_For_Edd {
 	 * @return    Addonify_Recaptcha_For_Edd_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
+
 		return $this->loader;
 	}
 
@@ -231,7 +233,7 @@ class Addonify_Recaptcha_For_Edd {
 	 * @return    string    The version number of the plugin.
 	 */
 	public function get_version() {
+
 		return $this->version;
 	}
-
 }

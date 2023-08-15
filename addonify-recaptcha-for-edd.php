@@ -1,5 +1,4 @@
 <?php
-
 /**
  *
  * @link              https://addonify.com

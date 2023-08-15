@@ -58,7 +58,7 @@ Log into your Google account and [Sign Up](http://www.google.com/recaptcha/admin
 
 == Changelog ==
 
-= 1.0.11 - ? 2023 =
+= 1.0.11 - 15 August 2023 =
 
 - Updated: Tags.
 - Fix: Readme.txt issues.
