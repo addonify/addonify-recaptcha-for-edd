@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Define the internationalization functionality
  *
@@ -13,7 +12,6 @@
  * @subpackage Addonify_Recaptcha_For_Edd/includes
  */
 class Addonify_Recaptcha_For_Edd_i18n {
-
 
 	/**
 	 * Load the plugin text domain for translation.
@@ -29,7 +27,4 @@ class Addonify_Recaptcha_For_Edd_i18n {
 		);
 
 	}
-
-
-
 }

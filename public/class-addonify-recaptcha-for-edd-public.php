@@ -1,7 +1,6 @@
 <?php
-
 /**
- * The public-facing functionality of the plugin.
+ * Class - Addonify_Recaptcha_For_Edd_Public
  *
  * @link       https://addonify.com
  * @since      1.0.0
