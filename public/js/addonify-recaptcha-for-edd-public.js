@@ -1,9 +1,9 @@
-let currentTime = Date.now();
+var currentTime = Date.now();
 
-let captchaEle;
+var captchaEle;
 
 // Addonify Recaptcha Object Initialization.
-let addonifyRecaptcha = {
+var addonifyRecaptcha = {
 
 	createRecaptchaEle: function () {
 		// Get login form element.
@@ -20,7 +20,7 @@ let addonifyRecaptcha = {
 				// Set id attribute to the recaptcha element.
 				captchaEle.setAttribute("id", "addonify-g-recaptcha-" + currentTime);
 				// Get the element before which the recaptcha element is to be inserted.
-				let target = document.querySelector('#edd_login_form p.edd-login-remember');
+				var target = document.querySelector('#edd_login_form p.edd-login-remember');
 				// Insert recaptcha element before the target element.
 				target.parentNode.insertBefore(captchaEle, target);
 			}
@@ -42,7 +42,7 @@ let addonifyRecaptcha = {
 
 addonifyRecaptcha.createRecaptchaEle();
 
-const onloadCallback = function () {
+var onloadCallback = function () {
 
 	if (captchaEle != null) {
 		grecaptcha.render(captchaEle, {
