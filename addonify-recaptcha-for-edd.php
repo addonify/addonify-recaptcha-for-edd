@@ -9,7 +9,7 @@
  * Plugin Name:       Addonify - reCaptcha For EDD
  * Plugin URI:        https://addonify.com/downloads/recaptcha-for-edd
  * Description:       Addonify reCaptcha For EDD is a simple plugin that adds Google reCaptcha in Easy Digital Downloads login and registration forms.
- * Version:           1.0.13
+ * Version:           1.0.14
  * Author:            Addonify
  * Author URI:        https://addonify.com/
  * License:           GPL-2.0+
@@ -28,7 +28,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'ADDONIFY_RECAPTCHA_FOR_EDD_VERSION', '1.0.13' );
+define( 'ADDONIFY_RECAPTCHA_FOR_EDD_VERSION', '1.0.14' );
 
 /**
  * The code that runs during plugin activation.
